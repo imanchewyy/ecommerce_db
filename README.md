@@ -43,6 +43,51 @@ The purpose of this system is to simulate a real-world e-commerce platform that 
 
 ---
 
+## 🚀 Installation Guide (Laragon Setup)
+
+Follow these steps to run the system using Laragon:
+
+### Step 1: Move Project Folder
+- Extract the project ZIP file
+- Copy the project folder
+- Paste into: C:\laragon\www\
+
+### Step 2: Start Laragon
+- Open Laragon
+- Click **Start All**
+- Ensure Apache and MySQL are running
+
+### Step 3: Create Database
+- Open **phpMyAdmin** (http://localhost/phpmyadmin)
+- Create a new database: ecommerce_db
+
+### Step 4: Import Database
+- Click the created database
+- Go to **Import**
+- Upload the SQL file from the project (e.g. `ecommerce_db.sql`)
+- Click **Go**
+
+### Step 5: Configure Database Connection
+- Open file: config/app_local.php
+
+- Update database settings:
+  'Datasources' => [
+    'default' => [
+        'host' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'ecommerce_db',
+    ],
+],
+
+### Step 6: Access the System
+Open browser and go to: http://localhost/ecommerce_db
+
+### Step 7 (Optional): Run CakePHP Server
+If needed: bin/cake server
+
+---
+
 ## 🏗️ System Architecture
 
 The system follows MVC (Model-View-Controller) architecture:
