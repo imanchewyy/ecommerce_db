@@ -56,50 +56,20 @@ Follow these steps to run the system using Laragon:
 ```bash
 C:\laragon\www\
 
----
-
-### 2️⃣ Start Laragon
-- Open Laragon  
-- Click **Start All**  
-- Ensure Apache and MySQL are running  
-
----
-
-### 3️⃣ Create Database
-- Open phpMyAdmin:  
-  http://localhost/phpmyadmin  
-- Create a new database: ecommerce_db
-
-
----
-
-### 4️⃣ Import Database
-- Select the database  
-- Click **Import**  
-- Upload the SQL file (e.g. `ecommerce_db.sql`)  
-- Click **Go**  
-
----
-
-### 5️⃣ Configure Database Connection
+Step 2: Start Laragon
+Open Laragon
+Click Start All
+Ensure Apache and MySQL are running
+Step 3: Create Database
+Open phpMyAdmin (http://localhost/phpmyadmin)
+Create a new database: ecommerce_db
+Step 4: Import Database
+Click the created database
+Go to Import
+Upload the SQL file from the project (e.g. ecommerce_db.sql)
+Click Go
+Step 5: Configure Database Connection
 Open file: config/app_local.php
-
-
-Update:
-
-```php
-'Datasources' => [
-    'default' => [
-        'host' => 'localhost',
-        'username' => 'root',
-        'password' => '',
-        'database' => 'ecommerce_db',
-    ],
-],
-
-### 6️⃣ Access the System
-Open browser and go to: http://localhost/ecommerce_db
-
-
-
-
+Update database settings: 'Datasources' => [ 'default' => [ 'host' => 'localhost', 'username' => 'root', 'password' => '', 'database' => 'ecommerce_db', ], ],
+Step 6: Access the System
+Open browser and go to: http://localhost/ecommerce_db
